@@ -8,9 +8,15 @@ int main() {
     scanf("%s", sobrenome);
     printf("Nome: %s\n", nome);
     printf("Sobrenome: %s\n", sobrenome);
+
+    //Concatenação das strings
     strcat(nome, " ");
     strcat(nome, sobrenome);
     printf("Nome completo: %s\n", nome);
+    
+    //Comprimento da concatenação
+    int tamanho = strlen(nome);
+    printf("O tamanho e: %d\n", tamanho);
 
     return 0;
 }
