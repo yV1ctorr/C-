@@ -6,17 +6,10 @@ int main() {
     scanf("%s", nome);
     printf("Digite seu sobrenome: ");
     scanf("%s", sobrenome);
-    printf("Nome: %s\n", nome);
-    printf("Sobrenome: %s\n", sobrenome);
 
-    //Concatenação das strings
-    strcat(nome, " ");
-    strcat(nome, sobrenome);
-    printf("Nome completo: %s\n", nome);
-    
-    //Comprimento da concatenação
-    int tamanho = strlen(nome);
-    printf("O tamanho e: %d\n", tamanho);
+    //Função string: copiar o valor de uma string para a outra
+    strcpy(sobrenome, nome);
+    printf("%s\n", sobrenome);
 
     return 0;
 }
