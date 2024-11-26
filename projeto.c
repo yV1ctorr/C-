@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 int main() {
-    int number[2][3] = {
-        {1, 2, 3},
-        {4, 5, 6}
-    };
+    char nome[10], sobrenome[10];
+    printf("Digite seu primeiro nome: ");
+    scanf("%s", nome);
+    printf("Digite seu sobrenome: ");
+    scanf("%s", sobrenome);
+    printf("Nome: %s\n", nome);
+    printf("Sobrenome: %s\n", sobrenome);
+    strcat(nome, " ");
+    strcat(nome, sobrenome);
+    printf("Nome completo: %s\n", nome);
 
-    printf("%d\n", number[1][0]);
     return 0;
 }
