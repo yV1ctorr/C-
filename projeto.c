@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <string.h>
+typedef struct Remedio{
+    char nome[20];
+    int quantidade;
+    float valor;
+};
+
 int main() {
-    char nome[10], sobrenome[10];
-    printf("Digite seu primeiro nome: ");
-    scanf("%s", nome);
-    printf("Digite seu sobrenome: ");
-    scanf("%s", sobrenome);
-
-    //Função string: copiar o valor de uma string para a outra
-    strcpy(sobrenome, nome);
-    printf("%s\n", sobrenome);
-
+    struct Remedio remedio1;
+    strcpy(remedio1.nome, "dorflex");
+    remedio1.quantidade = 10;
+    remedio1.valor = 2.50;
     return 0;
 }
