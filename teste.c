@@ -1,19 +1,27 @@
 #include <stdio.h>
 #include <string.h>
 int  main() {
-    char s[10];
-    printf("Digite algo (scanf tradicional): \n");
-    scanf("%s", s);
-    // limpar o buffer
-    fflush(stdin);
+    int mat[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    int i,j;
 
-    printf("resultado: %s\n", s);
-    // entrada: lendo os espaços e respeitando o tamanho da string
-    printf("Digite algo (scanf aprimorado):\n");
-    scanf("%9[^\n]s", s);
-    fflush(stdin);
-    printf("resultado: %s\n", s);
+    printf("Imprimindo a primeira linha: \n");
+    for(j=0; j<3; j++){
+        printf("%d", mat[0][j]);
+    }
 
-    
+    printf("\n Imprimindo a matriz toda:\n");
+    for (i=0; i<3; i++){
+        for (j=0; j<3; j++){
+            printf("%d", mat[i][j]);
+        }
+        printf("\n");
+
+    }
+
+
     return 0;
 }
