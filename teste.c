@@ -1,26 +1,36 @@
 #include <stdio.h>
 #include <string.h>
-int  main() {
-    int mat[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
-    int i,j;
+// declaração de struct
+struct pessoa{
+    char nome[20];
+    int idade;
+    float altura;
+};
+// redefine a struct("pessoa") para "Pessoa" 
+typedef struct pessoa Pessoa;
 
-    printf("Imprimindo a primeira linha: \n");
-    for(j=0; j<3; j++){
-        printf("%d", mat[0][j]);
-    }
+int  main() {    
+    // criando variavel dentro da struct
+    Pessoa pessoa1;
+    // atribuindo valores aos campos
+    printf("Inicio\n");
+    printf("Nome:%s\n", pessoa1.nome);
+    printf("Idade: %d\n", pessoa1.idade);
+    printf("Altura: %.2f/n", pessoa1.altura);
 
-    printf("\n Imprimindo a matriz toda:\n");
-    for (i=0; i<3; i++){
-        for (j=0; j<3; j++){
-            printf("%d", mat[i][j]);
-        }
-        printf("\n");
+    // usuario atribuindo valores
+    printf("Digite seu nome:\n");
+    scanf("%19[^\n]s", pessoa1.nome);
+    fflush(stdin);
+    printf("DIgite a sua idade:\n");
+    scanf("%d", &pessoa1.idade);
+    printf("Digite a sua altura:\n");
+    scanf("%f", &pessoa1.altura);
 
-    }
+    printf("PESSOA 1 \n");
+    printf("Nome: %s\n", pessoa1.nome);
+    printf("Idade: %i\n", pessoa1.idade);
+    printf("Altura:%.2f\n", pessoa1.altura);
 
 
     return 0;
