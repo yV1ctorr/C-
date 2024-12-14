@@ -9,6 +9,14 @@ int main() {
   
   printf("Digite sua senha: \n");
   scanf("[^\n]s", senhaInserida);
-  strcmp()
+  strcmp(senha, senhaInserida);
+
+  while (strcmp) {
+    if(strcmp == 0){
+      Printf("Bem vindo!");
+    }  else{
+         printf("Digite sua senha novamente!");
+    }
+  }
   return 0;
 }
