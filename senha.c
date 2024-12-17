@@ -1,10 +1,9 @@
-#include <studio.h>
+#include <stdio.h>
 #include <string.h>
 
 int main() {
 
-  char senha[10];
-  senha = "senha";
+  char senha[10] = "senha";
   char senhaInserida;
   
   printf("Digite sua senha: \n");
